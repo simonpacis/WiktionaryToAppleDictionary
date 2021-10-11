@@ -6,3 +6,11 @@ You can download and install the ones I've done from here.
 Download a specific dictionary folder and cd to it on the commandline.
 Then run the command "make install" to install the dictionary.
 Restart Dictionary.app, go to Preferences and enable the new dictionary.
+
+## Languages
+
+| Language | Dropdate | Download URL |
+|----------|----------|--------------|
+| Latin    | 20211001 |              |
+|          |          |              |
+|          |          |              |
