@@ -12,5 +12,3 @@ Restart Dictionary.app, go to Preferences and enable the new dictionary.
 | Language | Dropdate | Download URL |
 |----------|----------|--------------|
 | Latin    | 20211001 |              |
-|          |          |              |
-|          |          |              |
