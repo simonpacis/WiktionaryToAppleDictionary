@@ -9,6 +9,6 @@ Restart Dictionary.app, go to Preferences and enable the new dictionary.
 
 ## Languages
 
-| Language | Dropdate | Download URL |
-|----------|----------|--------------|
-| Latin    | 20211001 |              |
+| Language | Dump date | Download URL |
+|----------|-----------|--------------|
+| Latin    | 20211001  |              |
