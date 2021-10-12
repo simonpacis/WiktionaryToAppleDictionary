@@ -3,7 +3,9 @@ I'm slowly working my way through converting Wiktionary dumps to the proprietary
 You can download and install the ones I've done from here.
 
 ## Usage
-Download a specific dictionary folder and cd to it on the commandline.
+Download a specific Dictionary from the table below.
+Extracrt it and cd to it in the Terminal.
+
 Then run the command "make install" to install the dictionary.
 Restart Dictionary.app, go to Preferences and enable the new dictionary.
 

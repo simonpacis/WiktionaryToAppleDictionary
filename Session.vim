@@ -82,9 +82,10 @@ nmap ySs <Plug>YSsurround
 nmap yss <Plug>Yssurround
 nmap yS <Plug>YSurround
 nmap ys <Plug>Ysurround
-nnoremap <SNR>109_: :=v:count ? v:count : ''
-nnoremap <SNR>103_: :=v:count ? v:count : ''
+nnoremap <SNR>127_: :=v:count ? v:count : ''
 nnoremap <SNR>112_: :=v:count ? v:count : ''
+nnoremap <SNR>103_: :=v:count ? v:count : ''
+nnoremap <SNR>109_: :=v:count ? v:count : ''
 vnoremap <silent> <Plug>NetrwBrowseXVis :call netrw#BrowseXVis()
 nnoremap <silent> <Plug>NetrwBrowseX :call netrw#BrowseX(netrw#GX(),netrw#CheckIfRemote(netrw#GX()))
 nnoremap <silent> <Plug>SurroundRepeat .
@@ -525,20 +526,20 @@ setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 14 - ((13 * winheight(0) + 28) / 57)
+let s:l = 7 - ((6 * winheight(0) + 28) / 57)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 14
-normal! 0181|
+keepjumps 7
+normal! 0
 wincmd w
 2wincmd w
 exe 'vert 1resize ' . ((&columns * 31 + 104) / 208)
 exe 'vert 2resize ' . ((&columns * 176 + 104) / 208)
 tabnext 1
+badd +1 README.md
 badd +2 .gitignore
 badd +1 downloader.py
-badd +0 README.md
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf
 endif
