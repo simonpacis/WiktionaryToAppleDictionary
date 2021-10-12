@@ -82,7 +82,9 @@ nmap ySs <Plug>YSsurround
 nmap yss <Plug>Yssurround
 nmap yS <Plug>YSurround
 nmap ys <Plug>Ysurround
+nnoremap <SNR>109_: :=v:count ? v:count : ''
 nnoremap <SNR>103_: :=v:count ? v:count : ''
+nnoremap <SNR>112_: :=v:count ? v:count : ''
 vnoremap <silent> <Plug>NetrwBrowseXVis :call netrw#BrowseXVis()
 nnoremap <silent> <Plug>NetrwBrowseX :call netrw#BrowseX(netrw#GX(),netrw#CheckIfRemote(netrw#GX()))
 nnoremap <silent> <Plug>SurroundRepeat .
@@ -187,11 +189,12 @@ set showtabline=2
 set tabline=%!airline#extensions#tabline#get()
 set tabstop=4
 set viminfo='100,<50,s10,h,!
+set wildignore=*.pyc
 let s:so_save = &g:so | let s:siso_save = &g:siso | setg so=0 siso=0 | setl so=-1 siso=-1
 let v:this_session=expand("<sfile>:p")
 silent only
 silent tabonly
-cd ~/Documents/Development/WiktionaryAppleDicts
+cd ~/Documents/Development/WiktionaryToAppleDictionary
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
@@ -386,7 +389,7 @@ setlocal nowrap
 setlocal wrapmargin=0
 wincmd w
 argglobal
-balt README.md
+balt .gitignore
 let s:cpo_save=&cpo
 set cpo&vim
 imap <buffer> <C-N> <Plug>SparkupNext
@@ -522,17 +525,19 @@ setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 8 - ((7 * winheight(0) + 28) / 57)
+let s:l = 14 - ((13 * winheight(0) + 28) / 57)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 8
-normal! 0
+keepjumps 14
+normal! 0181|
 wincmd w
 2wincmd w
 exe 'vert 1resize ' . ((&columns * 31 + 104) / 208)
 exe 'vert 2resize ' . ((&columns * 176 + 104) / 208)
 tabnext 1
+badd +2 .gitignore
+badd +1 downloader.py
 badd +0 README.md
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf
